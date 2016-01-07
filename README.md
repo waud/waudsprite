@@ -21,7 +21,9 @@ brew install ffmpeg --with-theora --with-libogg --with-libvorbis
 
 ###Usage
 
-`waudsprite --loop loop --autoplay loop  -o assets/sprite -e m4a assets/*.mp3`
+```
+waudsprite --loop loop --autoplay loop  -o assets/sprite -e m4a assets/*.mp3
+```
 
 The above command generates the following json:
 
@@ -78,3 +80,10 @@ info: Options:
   --rawparts, -p    Include raw slices(for Web Audio API) in specified formats.  [default: ""]
   --help, -h        Show this help message.
 ```
+
+### Licensing Information ###
+
+<a rel="license" href="http://opensource.org/licenses/MIT">
+<img alt="MIT license" height="40" src="http://upload.wikimedia.org/wikipedia/commons/c/c3/License_icon-mit.svg" /></a>
+
+This content is released under the [MIT](http://opensource.org/licenses/MIT) License.
