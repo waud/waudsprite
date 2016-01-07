@@ -27,7 +27,7 @@ waudsprite --loop loop --autoplay loop  -o assets/sprite -e m4a assets/*.mp3
 
 The above command generates the following json:
 
-```
+```json
 {
 	"src": "assets/sprite.m4a",
 	"sprite": [
