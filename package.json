@@ -1,6 +1,6 @@
 {
 	"name": "waudsprite",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Audio Sprite Generator for waud.js",
 	"main": "./dist/waud.min.js",
 	"license": "MIT",
