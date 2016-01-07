@@ -63,7 +63,7 @@ The above command generates the following json:
 
 ```
 waudsprite --help
-info: Usage: audiosprite [options] *.mp3
+info: Usage: waudsprite [options] *.mp3
 info: Options:
   --output, -o      Name for the output files.                                   [default: "sprite"]
   --path, -u        Path for files to be used on final JSON.                     [default: ""]
