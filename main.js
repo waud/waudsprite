@@ -104,7 +104,7 @@ if (argv.help || !files.length) {
     if (!argv.help) {
         winston.error('No input files specified.')
     }
-    winston.info('Usage: audiosprite [options] *.mp3')
+    winston.info('Usage: waudsprite [options] *.mp3')
     winston.info(optimist.help())
     process.exit(1)
 }
