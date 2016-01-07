@@ -1,5 +1,5 @@
 # waudsprite
-![waud logo](https://raw.githubusercontent.com/adireddy/waud/master/logo.png)
+![waud logo](https://raw.githubusercontent.com/adireddy/waudsprite/master/logo.png)
 
 Audio Sprite Generator for [waud.js](https://github.com/adireddy/waud) - ported from [audiosprite](https://github.com/tonistiigi/audiosprite).
 
