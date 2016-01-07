@@ -1,8 +1,7 @@
 {
 	"name": "waudsprite",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Audio Sprite Generator for waud.js",
-	"main": "./dist/waud.min.js",
 	"license": "MIT",
 	"main": "./waudsprite.js",
 	"bin": {
@@ -13,10 +12,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/adireddy/waud"
+		"url": "https://github.com/adireddy/waudsprite"
 	},
 	"bugs": {
-		"url": "https://github.com/adireddy/waud/issues"
+		"url": "https://github.com/adireddy/waudsprite/issues"
 	},
 	"author": {
 		"name": "Adi Reddy Mora",
