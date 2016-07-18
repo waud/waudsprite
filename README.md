@@ -1,5 +1,8 @@
 # waudsprite
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/waudsprite.svg)](https://www.npmjs.com/package/waudsprite)
+
 ![waud logo](https://raw.githubusercontent.com/adireddy/waud/dev/logo.png)
 
 Audio Sprite Generator for [waud.js](https://github.com/adireddy/waud) - ported from [audiosprite](https://github.com/tonistiigi/audiosprite).
