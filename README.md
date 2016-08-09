@@ -1,8 +1,8 @@
 # waudsprite [![npm version](https://badge.fury.io/js/waudsprite.svg)](https://www.npmjs.com/package/waudsprite)
 
-![waud logo](https://raw.githubusercontent.com/adireddy/waud/dev/logo.png)
+<a href="http://waudjs.com"><img class="logo" width="280" height="60" src="http://waud.github.io/images/logo/logo.png" alt="Waud"/></a>
 
-Audio Sprite Generator for [waud.js](https://github.com/adireddy/waud) - ported from [audiosprite](https://github.com/tonistiigi/audiosprite).
+Audio Sprite Generator for [waud.js](https://github.com/waud/waud) - ported from [audiosprite](https://github.com/tonistiigi/audiosprite).
 
 ###Installation
 
