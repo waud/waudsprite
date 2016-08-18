@@ -28,6 +28,20 @@ var defaults = {
 };
 
 module.exports = function (files) {
+    if (files.length === 1 && files[0].indexOf("*.") > -1) {
+        var filesList = files[0].split("/");
+        var extension;
+        var basePath = "";
+        if (filesList.length > 1) {
+            basePath = filesList[0];
+            extension = filesList[1].substring(1, filesList[1].length);
+        }
+        else extension = filesList[0].substring(1, filesList[0].length);
+
+        files = [];
+        getRecursiveFiles(basePath);
+    }
+
     var opts = {}, callback = function () {
     }
 
@@ -64,6 +78,23 @@ module.exports = function (files) {
         }
         processFiles();
     });
+
+    function getRecursiveFiles(folder) {
+        try {
+            var dirfiles = fs.readdirSync(folder);
+            for (var i = 0; i < dirfiles.length; i++) {
+                var stats = fs.statSync(folder + "/" + dirfiles[i]);
+                if (stats.isDirectory()) getRecursiveFiles(folder + "/" + dirfiles[i]);
+                else {
+                    var name = folder + "/" + dirfiles[i];
+                    if (dirfiles[i].indexOf(extension) > -1) files.push(name);
+                }
+            }
+        }
+        catch (e) {
+            console.log("can't read directory - " + folder);
+        }
+    }
 
     function mktemp(prefix) {
         var tmpdir = require("os").tmpDir() || ".";
