@@ -4,13 +4,13 @@
 
 Audio Sprite Generator for [waud.js](https://github.com/waud/waud) - ported from [audiosprite](https://github.com/tonistiigi/audiosprite).
 
-###Installation
+### Installation
 
 ```
 npm install -g waudsprite
 ```
 
-###Dependencies
+### Dependencies
 
 You need `FFmpeg` framework and `ogg` codecs to use **`waudsprite`**.
 
@@ -20,7 +20,7 @@ Install on OSX using `brew`:
 brew install ffmpeg --with-theora --with-libogg --with-libvorbis
 ```
 
-###Usage
+### Usage
 
 ```
 waudsprite --loop loop --autoplay loop  -o assets/sprite -e m4a assets/*.mp3
@@ -60,7 +60,7 @@ The above command generates the following json:
 }
 ```
 
-###Help
+### Help
 
 ```
 waudsprite --help

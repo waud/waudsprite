@@ -29,12 +29,13 @@ var defaults = {
 
 module.exports = function (files) {
     if (files.length === 1 && files[0].indexOf("*.") > -1) {
-        var filesList = files[0].split("/");
+        var filesList = files[0].split(/[\/\\]/);
         var extension;
         var basePath = "./";
         if (filesList.length > 1) {
-            basePath = filesList[0];
-            extension = filesList[1].substring(1, filesList[1].length);
+            var lastElement = filesList.pop();
+            extension = lastElement.substring(1, lastElement.length);
+            basePath = filesList.join("/");
         }
         else extension = filesList[0].substring(1, filesList[0].length);
 
@@ -43,11 +44,12 @@ module.exports = function (files) {
     }
 
     var opts = {}, callback = function () {
-    }
+    };
 
     if (arguments.length == 2) {
         callback = arguments[1];
-    } else if (arguments.length >= 3) {
+    }
+    else if (arguments.length >= 3) {
         opts = arguments[1];
         callback = arguments[2];
     }
