@@ -31,7 +31,7 @@ module.exports = function (files) {
     if (files.length === 1 && files[0].indexOf("*.") > -1) {
         var filesList = files[0].split("/");
         var extension;
-        var basePath = "";
+        var basePath = "./";
         if (filesList.length > 1) {
             basePath = filesList[0];
             extension = filesList[1].substring(1, filesList[1].length);
