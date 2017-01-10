@@ -19,8 +19,8 @@ var optimist = require('optimist')
     })
     .options('export', {
         alias: 'e'
-        , 'default': 'ogg,m4a,mp3,ac3'
-        , describe: 'Limit exported file types. Comma separated extension list.'
+        , 'default': 'm4a'
+        , describe: 'Limit exported file types (ogg,m4a,mp3,ac3). Comma separated extension list. '
     })
     .options('log', {
         alias: 'l'

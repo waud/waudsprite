@@ -6,7 +6,7 @@ var _ = require('underscore')._
 var defaults = {
     output: "sprite",
     path: "",
-    export: "m4a,mp3,ac3,ogg",
+    export: "m4a",
     format: null,
     autoplay: null,
     loop: [],
