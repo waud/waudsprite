@@ -199,7 +199,7 @@ module.exports = function (files) {
 
                 opts.logger.info("Exported " + ext + " OK", {file: outfile});
                 if (store) {
-                    json.src = outfile;
+                    json.src = path.basename(outfile);
                 }
                 cb();
             });
