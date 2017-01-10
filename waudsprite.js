@@ -166,7 +166,7 @@ module.exports = function (files) {
                 loop: name === opts.autoplay || opts.loop.indexOf(name) !== -1
             });
             offsetCursor += originalDuration;
-            appendSilence(extraDuration + Math.ceil(duration) - duration + opts.gap, dest, cb);
+            appendSilence(opts.gap > 0 ? extraDuration + Math.ceil(duration) - duration + opts.gap : 0, dest, cb);
         });
         reader.pipe(writer);
     }
@@ -202,25 +202,6 @@ module.exports = function (files) {
                     json.src = path.basename(outfile);
                 }
                 cb();
-            });
-    }
-
-    function exportFileCaf(src, dest, cb) {
-        if (process.platform !== "darwin") {
-            return cb(true);
-        }
-        spawn("afconvert", ["-f", "caff", "-d", "ima4", src, dest])
-            .on("exit", function (code, signal) {
-                if (code) {
-                    return cb({
-                        msg: "Error exporting file",
-                        format: "caf",
-                        retcode: code,
-                        signal: signal
-                    });
-                }
-                opts.logger.info("Exported caf OK", {file: dest});
-                return cb();
             });
     }
 
