@@ -288,7 +288,7 @@ module.exports = function (files) {
                 exportFile(tempFile, opts.output, ext, formats[ext], true, cb);
             }, function (err) {
                 if (err) {
-                    return callback(new Error("Error exporting file"));
+                    return callback(new Error(err.msg));
                 }
                 fs.unlinkSync(tempFile);
                 callback(null, json);
