@@ -6,7 +6,7 @@ var _ = require('underscore')._
 var defaults = {
     output: "sprite",
     path: "",
-    export: "m4a,mp3,ac3,ogg",
+    export: "m4a",
     format: null,
     autoplay: null,
     loop: [],
@@ -199,7 +199,7 @@ module.exports = function (files) {
 
                 opts.logger.info("Exported " + ext + " OK", {file: outfile});
                 if (store) {
-                    json.src = outfile;
+                    json.src = path.basename(outfile);
                 }
                 cb();
             });
@@ -288,7 +288,7 @@ module.exports = function (files) {
                 exportFile(tempFile, opts.output, ext, formats[ext], true, cb);
             }, function (err) {
                 if (err) {
-                    return callback(new Error("Error exporting file"));
+                    return callback(new Error(err.msg));
                 }
                 fs.unlinkSync(tempFile);
                 callback(null, json);
